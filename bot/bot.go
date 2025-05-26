@@ -52,7 +52,6 @@ func messageHandler(s *discordgo.Session, e *discordgo.MessageCreate) {
 	if strings.HasPrefix(e.Content, prefix) {
 		args := strings.Fields(e.Content)[strings.Index(e.Content, prefix):]
 		cmd := args[0][len(prefix):]
-		arguments := args[1:]
 
 		switch cmd {
 		case "ping":
